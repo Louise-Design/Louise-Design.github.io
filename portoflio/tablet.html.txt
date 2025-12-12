@@ -1,0 +1,7 @@
+<h2>Tablet Designs</h2>
+
+<div class="gallery">
+  <img src="images/tablet/1.jpg">
+  <img src="images/tablet/2.jpg">
+  <img src="images/tablet/3.jpg">
+</div>
