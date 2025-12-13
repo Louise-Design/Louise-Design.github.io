@@ -9,17 +9,37 @@
 
 <h1 class="title">Louise Design</h1>
 
+<!-- CATEGORIES -->
 <div class="categories">
-  <a href="tablet.html" class="category">
-    <img src="images/tablet/cover.jpg" alt="Tablet">
+  <div class="category" onclick="openModal('tablet')">
+    <img src="images/tablet/cover.jpg">
     <span>Tablet</span>
-  </a>
-
-  <a href="laptop.html" class="category">
-    <img src="images/laptop/cover.jpg" alt="Laptop">
-    <span>Laptop</span>
-  </a>
+  </div>
 </div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <div class="modal-content" id="modal-content"></div>
+</div>
+
+<script>
+function openModal(type) {
+  document.getElementById("modal").style.display = "flex";
+
+  document.getElementById("modal-content").innerHTML = `
+    <h2>${type} designs</h2>
+    <div class="gallery">
+      <img src="images/${type}/1.jpg">
+      <img src="images/${type}/2.jpg">
+    </div>
+  `;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
